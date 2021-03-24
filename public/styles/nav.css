@@ -1,0 +1,14 @@
+nav {
+    color: #FFFFFF;
+    background-color: #4056A1;
+    font-family: "Bungee", "Source Sans Pro", sans-serif;
+    height: 120px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

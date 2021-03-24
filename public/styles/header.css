@@ -1,0 +1,19 @@
+.tweetererAvatar {
+    background-image: url("../images/washi.png");
+    background-color: wheat;
+    display: flex;
+    padding-top: 150px;
+    height: 400px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tweetererName {
+    background-image: url("../images/washi.png");
+    background-color: wheat;
+    font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
