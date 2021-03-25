@@ -1,24 +1,24 @@
 [
   {
     "user": {
-      "name": "Newton",
+      "name": "Lucy Westenra",
       "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@theBlooferLady"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Dress is a bore."
     },
-    "created_at": 1616463880894
+    "created_at": 1616475466267
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "Mina Harker",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "handle": "@mrsharker"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Fortunately I am not of a fainting disposition"
     },
-    "created_at": 1616550280894
+    "created_at": 1616561866267
   }
 ]
