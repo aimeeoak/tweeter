@@ -48,28 +48,28 @@
     </p>
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form>
-        <label for="tweet-text">What are you humming about?</label>
-        <br>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div>
+      <form action="/tweets" method="POST">
+        <section class="new-tweet-form">
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <div class="send-tweet">
           <button class="button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
+        </section>
         </div>
       </form>
     </section>
     <main class="container" id="tweeter-tweets">
       <article class="el-tweeto">
         <h1>Recent Tweets</h1>
-      </article>
-      <article class="tweet1">
+        </article>
+        <article class="tweet1">
           <h2>Count Dracula</h2>
           <p>Looking for good allium-free recipes, please suggest! #cooking</p>
-      </article>
-      <article class="tweet2">
+        </article>
+        <article class="tweet2">
           <h2>Frankenstein's Monster</h2>
           <p>Every English professor asks 'who is Frankenstein's Monster?' but never 'How is Frankenstein's Monster?'</p> 
-      </article>
+        </article>
     </main>
   </body>
 </html>

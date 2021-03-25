@@ -1,25 +1,26 @@
 .new-tweet {
     flex-direction: column;
+    align-content: center;
     display: flex;
-    background-color: #ececec;
-    border-radius: 5px;
-    border-color: #bdbdbd;
-    border-style: solid;
-    border-width: 1px;
-    padding: 0.5em;
+    width: 90%;
+    padding: 2em;
 }
 
 .new-tweet h2 {
-    margin-top: 0;
+    margin-top: 1em;
     justify-content: flex-start;
     border-bottom: solid #4a4747 5px;
 }
 
 .new-tweet textarea {
-     width: 90%;
-     justify-content: center;
-     float: left;
-     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    border: 0;
+    border-bottom: 5px solid #4056A1;
+    resize: none;
+    width: 100%;
+    background-color: #f4f1ec;
 }
 
 .button {
@@ -43,3 +44,4 @@
 .counter-red {
     color: red;
 }
+
