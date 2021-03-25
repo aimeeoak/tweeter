@@ -5,15 +5,12 @@
  */
 
 $(document).ready(function(){
-  $('form').submit(function(){
+  renderTweets(data);
+  $('form').submit(function(event){
     event.preventDefault();
+    console.log($(tweet).serialize());
   });
 });
-
-
-
-
-
 
 const data = [
         {
@@ -40,45 +37,40 @@ const data = [
         }
       ]
 
+const loadTweets = function() {
+  $.ajax( "/tweets", { method: "GET"})
+    .then(function(tweets) {
+      renderTweets(tweets);
+      console.log("hello... it's tweets...", tweets)
+    });
+};
+
 const renderTweets = function(tweets) {
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-  for (let tweet in tweets)
-    $(".tweeter-tweets")
+  for (let tweet of tweets)
+    $("#tweeter-tweets").append(createTweetElement(tweet));
 };
 
 const createTweetElement = function(tweet) {
   let $tweet = $(`
     <article class="tweet">
       <header class="tweet-header">
-        <h1>${data.name}</h1>
+        <img src="${tweet.user.avatars}">
+        <h1>${tweet.user.name}</h1>
         <article class="tweet">
-          <h2>${data.text}</h2>
-          <p>data.${date}</p>
+          <h2>${tweet.content.text}</h2>
         </article>
-        <article class="tweet">
-          <h1>${data.name}</h1>
+        <article class="tweet1">
+          <h1>${tweet.user.handle}</h1>
           <article class="tweet">
-            <h2>${data.text}</h2>
           </article>
         </article>
     </header>
     <footer class="tweet-footer">
-    ${data.date}
+    ${tweet.created_at}
     </footer>
     </article>
-
       `)
       return $tweet;
 };
 
 renderTweets(data);
-{/* 
-if (request.url === "/") {
-  response.end("Welcome!");
-} else if (request.url === "/urls") {
-  response.end("www.lighthouselabs.ca\nwww.google.com");
-} else {
-  response.statusCode = 404;
-  response.end("404 Page Not Found");
-} */}
