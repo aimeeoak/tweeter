@@ -1,0 +1,33 @@
+.tweet {
+    flex-direction: column;
+    align-content: center;
+    display: flex;
+    width: 50%;
+    margin: 1em;
+    padding: 1em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header stuff */
+
+.tweet-header {
+    
+}
+
+tweet.author {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Bungee";
+}
+
+.tweet.user.name {
+    
+}
+
+.tweet.content {
+
+}
