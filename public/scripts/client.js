@@ -33,16 +33,27 @@ const data = [
 $(document).ready(function(){
   renderTweets(data);
   $('form').submit(function(event){
+    console.log('form');
     event.preventDefault();
     console.log($('form').serialize());
     console.log($("#tweet-text").val().length);
-  //   if ($("#tweet-text").val().length > 140) {
-  //     $('#error-message').text(errorMessage("too long")).slideDown();
-  //   } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0) {
-  //     $('#error-message').text(errorMessage("null")).slideDown();form 
-  // };
+    if ($("#tweet-text").val().length > 140) {
+      $('#error-message').text("Too long").slideDown();
+      return;
+    } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0) {
+      $('#error-message').text("Empty tweet").slideDown();
+      return;
+  };
   $.ajax( "/tweets", { method: "POST", data: $("form").serialize()})
-})
+  .then(function() {
+    console.log('Successful Post');
+    $("textarea").val("");
+    $(".counter").text(140);
+    $("#tweeter-tweets").empty();
+    loadTweets();
+    $("#error-message").slideUp();
+  })
+  })
 });
 
 const loadTweets = function() {
@@ -57,7 +68,7 @@ loadTweets();
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets)
-    $("#tweeter-tweets").append(createTweetElement(tweet));
+    $("#tweeter-tweets").prepend(createTweetElement(tweet));
 };
 
 const createTweetElement = function(tweet) {
@@ -65,7 +76,7 @@ const createTweetElement = function(tweet) {
     <article class="tweet">
       <header class="tweet-header"> 
       <span class=""tweeterer">
-      <article class="avatars"><img src="${tweet.user.avatars}"></article>
+      <span class="avatars"><img src="${tweet.user.avatars}"></span>
       <article class="tweet-author"> <b>${tweet.user.name}</b></article>
       <article class="tweet-handle">${tweet.user.handle}</article>
       </span>
@@ -83,11 +94,17 @@ const createTweetElement = function(tweet) {
 
 renderTweets(data);
 
-const error = function(errorMessage) {
-  let $error = ``;
-  if (errorMessage === "character limit") {
-    $error = "Talk less";
-  } else if (errorMessage === null) {
-    $error = "Talk more";
-  } return $error;
+// const error = function(errorMessage) {
+//   let $error = ``;
+//   if (errorMessage === "character limit") {
+//     $error = "Talk less";
+//   } else if (errorMessage === null) {
+//     $error = "Talk more";
+//   } return $error;
+// }
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }

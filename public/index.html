@@ -4,6 +4,8 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     
@@ -18,6 +20,7 @@
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,9 +49,14 @@
     
     <section class="new-tweet">
       <div class="tweetererName">
-        Kitty Kestral
+        <h4>
+        <span class="avatar"> <img src="/images/kestral.jpg">
+        <article class="nom-de-plume">Kitty Kestral</article>
+        <article class="header-tweet-handle">@CatWings</article>
+        </h4>
     </div>
       <h2>Compose Tweet</h2>
+      <div class="error" id="error-message"></div>
       <form action="/tweets" method="POST">
         <section class="new-tweet-form">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
