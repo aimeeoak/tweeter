@@ -8,7 +8,7 @@ const data = [
   {
     "user": {
       "name": "Leo Birdman",
-      "avatars": "",
+      "avatars": "../images/barbet.jpg",
       "handle": "@PurrsianPeacock"
     },
     "content": {
@@ -19,7 +19,7 @@ const data = [
   {
     "user": {
       "name": "Fluffy Feathers",
-      "avatars": "",
+      "avatars": "../images/kingfisher.jpg",
       "handle": "@QueenFisher"
     },
     "content": {
@@ -34,13 +34,14 @@ $(document).ready(function(){
   renderTweets(data);
   $('form').submit(function(event){
     event.preventDefault();
-    console.log($(tweet).serialize());
+    console.log($('form').serialize());
     console.log($("#tweet-text").val().length);
-    if ($("#tweet-text").val().length > 140) {
-      $('#error-message').text(errMessage("too long")).slideDown();
-    } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0) {
-      $('#error-message').text(errMessage("null")).slideDown();form 
-  };
+  //   if ($("#tweet-text").val().length > 140) {
+  //     $('#error-message').text(errorMessage("too long")).slideDown();
+  //   } else if ($("#tweet-text").val().length === null || $("#tweet-text").val().length === 0) {
+  //     $('#error-message').text(errorMessage("null")).slideDown();form 
+  // };
+  $.ajax( "/tweets", { method: "POST", data: $("form").serialize()})
 })
 });
 
@@ -63,10 +64,11 @@ const createTweetElement = function(tweet) {
   let $tweet = $(`
     <article class="tweet">
       <header class="tweet-header"> 
-      <article class="tweet-author">
-      <b>${tweet.user.name}</b>
-      <span class="tweet-handle">${tweet.user.handle}</span>
-        <img src="${tweet.user.avatars}">
+      <span class=""tweeterer">
+      <article class="avatars"><img src="${tweet.user.avatars}"></article>
+      <article class="tweet-author"> <b>${tweet.user.name}</b></article>
+      <article class="tweet-handle">${tweet.user.handle}</article>
+      </span>
         <article class="tweet-tweet">
           ${tweet.content.text}
         </article>

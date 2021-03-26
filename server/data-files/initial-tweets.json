@@ -1,0 +1,24 @@
+[
+  {
+    "user": {
+      "name": "Leo Birdman",
+      "avatars": "../images/barbet.jpg",
+      "handle": "@PurrsianPeacock"
+    },
+    "content": {
+      "text": "Heard you ladies like dancing, I can dance, dance, dance and I dance, dance, dance   "
+    },
+    "created_at": 1616568777887
+  },
+  {
+    "user": {
+      "name": "Fluffy Feathers",
+      "avatars": "../images/kingfisher.jpg",
+      "handle": "@QueenFisher"
+    },
+    "content": {
+      "text": "Just chilling in my birdhouse. Seems really small, maybe some birds can check it out?"
+    },
+    "created_at": 1616655177887
+  }
+]

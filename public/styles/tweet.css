@@ -59,3 +59,7 @@ article {
     border-radius: 25px;
     padding: 10px;
 }
+
+.avatars {
+    image-resolution: 100%;
+}
