@@ -1,19 +1,16 @@
-.tweetererAvatar {
+header {
     background-image: url("../images/washi.png");
-    background-color: wheat;
-    display: flex;
-    padding-top: 150px;
-    height: 400px;
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(12, 122, 85);
 }
 
-.tweetererName {
-    background-image: url("../images/washi.png");
-    background-color: wheat;
-    font-family: "Source Sans Pro", sans-serif;
+.tweetererAvatar {
+    background-image: url("../images/catfish logo.png");
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-position-y: 6em;
     display: flex;
-    justify-content: center;
+    height: 500px;
+    max-width: 100%;
+    justify-content: flex-start;
     align-items: center;
 }

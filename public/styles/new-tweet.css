@@ -1,4 +1,17 @@
+.tweetererName {
+    background-image: url("../images/washi.png");
+    background-color: rgb(12, 122, 85);
+    font-family: "Bungee", "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-left: 0em;
+}
+
 .new-tweet {
+    color: #ffffff;
     flex-direction: column;
     align-content: center;
     display: flex;
@@ -9,22 +22,29 @@
 .new-tweet h2 {
     margin-top: 1em;
     justify-content: flex-start;
-    border-bottom: solid #4a4747 5px;
+    border-bottom: solid #f1a922 5px;
 }
 
 .new-tweet textarea {
+    color: white;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     align-content: stretch;
     border: 0;
-    border-bottom: 5px solid #4056A1;
+    border-bottom: 5px solid #f1a922;
     resize: none;
     width: 100%;
-    background-color: #f4f1ec;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 300;
 }
 
 button {
-    background-color: #4056A1;
+    background-color: #f1a922;
     border: none;
     color: white;
     padding: 15px 25px;
@@ -37,6 +57,8 @@ button {
   }
 
 .counter {
+    color: white;
+    font-weight: 600;
     display: flex;
     justify-content: flex-end;
 }

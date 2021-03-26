@@ -1,9 +1,11 @@
 .container tweeter-tweets {
     display: flex;
     color: #545149;
+    border-style: solid;
     border-width: 5rem;
-    border-color: black;
-    background-color:  #f4f1ec;
+    border-color: black;    
+    background-image: url("../images/washi.png");
+    background-color: rgb(12, 122, 85);
     font-family: "Source Sans Pro", sans-serif;
     width: 90%;
     flex-direction: column;
