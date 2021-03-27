@@ -1,17 +1,28 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Join the hottest new social media app, "Tweeter"! Every user on Tweeter is guaranteed to be a bird. We promise. No cats here.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+"Tweeter" is mini Twitter clone created for [Lighthouse Labs](https://www.lighthouselabs.ca/) Web Developer Bootcamp. 
+## Examples
+
+!["Screenshot of header](https://github.com/aimeeoak/tweeter/blob/master/public/images/main-screen.png?raw=true)
+Main image with catfish icon, which has no secret meaning whatsoever.
+
+!["Screenshot of tweets"](https://github.com/aimeeoak/tweeter/blob/master/public/images/tweets.png?raw=true)
+Tweets from guaranteed bird users.
 
 ## Getting Started
 
-1. Fork this repository, then clone your fork of this repository.
+1. Clone this repository into your favourite directory.
+   - *Please ensure any other servers using Port 8080 are fully shut off before running*
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+3. Start the web server using the `npm run local` command. 
+4. Fly over to <http://localhost:8080/> in your browser to experince Tweeter. 
+5. Have fun!
 
 ## Dependencies
 
 - Express
+- body-parser
+- chance
 - Node 5.10.x or above
