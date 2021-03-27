@@ -29,51 +29,42 @@ body {
  /* Tablet View */
 
  @media only screen and (min-width: 768px) {
-  .feature {
+  .header {
     width: 33.3%;
     line-height: 600px;
   }
 
-  .content {
+  .new-tweet {
     width: 66.7%;
     float: right
   }
 
-  .footer {
-    clear: right;
+  .tweeter-tweets {
+    float: none;
   }
 }
 
 /* Desktop View */
 
 @media only screen and (min-width: 1024px) {
-  .hero {
-    width: 33.3%;
+  .header {
+    width: 50%;
     float: left;
+    display: flex;
+    flex-direction: column;
   }
 
-  .feature {
-    line-height: 300px;
-  }
-
-  .menu {
-    background-color: #111111;
-    color: #f0f0f0;
-    text-align: left;
-  }
-
-  .tagline {
-    display: inline;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 12px;
-    color: tomato;
+  .new-tweet {
     float: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .main {
-    max-width: 1024px;
-    font-size: 16px;
-    margin: 0 auto;
+  .tweeter-tweets {
+    float: right;
+    display: flex;
+    flex-direction: column;
   }
+  
 }
